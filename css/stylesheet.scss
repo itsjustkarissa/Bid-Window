@@ -1,25 +1,12 @@
-/*@import "fontface.scss";*/
+@import "fontface.scss";
 @import "mixins.scss";
 
-$bodFont: Calibri;
-
-$medGrey: #444;
-$darkGrey: #333;
-$mutedGrey: #a3a3a3;
-
-$drkBlue: #385d66;
-$btnBase: #4b9aaa;
-$bidL: #3d7d89;
-$bidS: rgba(0,0,0, .18);
-
-$smallT: .75em;
-$mediumT: 1.3em;
-$largeT: 1.8em;
-
-
+$btnBase: #3e9fb2;
+$bidTXT: #fff;
+$bidStroke: #3d7d89;
 
 body {
-	font-family: $bodFont;
+	font-family: Calibri, Helvetica, sans-serif;
 }
 .window {
 	position: absolute;
@@ -28,7 +15,7 @@ body {
 	left: 40%;
 	height: 280px;
 	width: 180px;
-	color: $darkGrey;
+	color: #333;
 	border: 1px solid #d1d1d1;
 	@include box-shadow((inset 0px -2px 6px 0px rgba(0,0,0, .08)));
 }
@@ -41,26 +28,28 @@ img,
 .bid-button {
 	position: relative;
 }
+.retail-p,
+.username {
+	font-size: .75em;
+}
 .item-name {
+	color: #444;
+	height: 30px;
+	margin: 9px auto 0 auto;
 	font-weight: normal;
 	line-height:  0.95em;
 	font-size: .9em;
-	margin: 9px auto 0 auto;
-	color: $medGrey;
-	height: 30px;
-/*	border: red solid 1px;*/
 }
 img {
 	padding: 2px 56px 0px 56px;
 }
 .retail-p {
-	font-size: $smallT;
-	color: $mutedGrey;
+	color: #a3a3a3;
 	top: -3px;
 }
 .timer {
 	line-height: 1.4;
-	font-size: $mediumT;
+	font-size: 1.3em;
 	height: 28px;
 	@include background1;
 	@include box-shadow((0px 1px 0px 0px rgba(0,0,0, .1)));
@@ -68,33 +57,58 @@ img {
 }
 .price {
 	top: 6px;
-	color: $darkGrey;
-	font-size: $largeT;
+	color: #333;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 .username {
-	color: $drkBlue;
-	font-size: $smallT;
+	color: #385d66;
 }
 .bid-button {
-	margin: 12px auto;
 	top: -1px;
 	height: 30px;
 	width: 58px;
-	color: #fff;
+	margin: 12px auto;
+	color: $bidTXT;
 	font-size: 1.1em;
 	line-height: 1.5em;
 	letter-spacing: .08em;
-	text-shadow:-1px -1px 0px $bidL,
-				 1px -1px 0px $bidL,
-				-1px 1px 0px $bidL,
-				 1px 1px 0px $bidL,
-				 0px 2px 0px $bidS;
+	text-shadow:-1px -1px 0px $bidStroke,
+				 1px -1px 0px $bidStroke,
+				-1px 1px 0px $bidStroke,
+				 1px 1px 0px $bidStroke,
+				 0px 2px 0px ($bidStroke/1.1);
 	background: $btnBase;
-	border: 1px solid #3d7d89;
+	border: 1px solid $bidStroke;
 	@include prefix(border-radius, 3px);
 	@include box-shadow((inset -.5px 1px 0px 0px rgba(255,255,255, .35),
 						 inset	0px 15px 10px -10px rgba(255,255,255, .1),
 						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
-								0px 1px 0px 0px #1c4047));
+								0px 1px 0px 0px ($bidStroke/3)));
+	&:hover,
+	&:active {
+		border: 1px solid ($bidStroke/1.15);
+	}
+	&:hover {
+		text-shadow:-1px -1px 0px $bidStroke*1.2,
+					 1px -1px 0px $bidStroke*1.2,
+					-1px 1px 0px $bidStroke/1.05,
+					 1px 1px 0px $bidStroke/1.05;
+		@include box-shadow((inset -.5px 1.5px 0px 0px rgba(255,255,255, .4),
+						 inset	0px 15px 10px -10px rgba(255,255,255, .25),
+						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
+						 inset .5px -1px 0px 0px rgba(0,0,0, .18),
+								0px 1px 0px 0px ($bidStroke/3)));
+	}
+	&:active {
+		text-shadow:-1px -1px 0px $bidStroke/1.05,
+					 1px -1px 0px $bidStroke/1.05,
+					-1px 1px 0px $bidStroke*1.2,
+					 1px 1px 0px $bidStroke*1.2;
+		@include box-shadow((inset -.5px 1px 0px 0px rgba(255,255,255, .3),
+						 inset	0px -15px 10px -10px rgba(255,255,255, .1),
+						 inset	0px 12px 10px -8px rgba(0,0,0, .18),
+						 inset .5px -1px 0px 0px rgba(255,255,255, .05),
+								0px 1px 0px 0px ($bidStroke/3)));
+	}
 }

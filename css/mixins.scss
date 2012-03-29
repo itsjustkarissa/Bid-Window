@@ -18,7 +18,6 @@
 /* @include box-shadow((junk, junk2)); */
 
 }
-
 @mixin background1 {
 	background: -moz-linear-gradient(top,  rgba(234,234,234,0) 30%, rgba(234,234,234,0.14) 50%, rgba(229,229,229,0.5) 99%, rgba(229,229,229,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(234,234,234,0)), color-stop(50%,rgba(234,234,234,0.14)), color-stop(99%,rgba(229,229,229,0.5)), color-stop(100%,rgba(229,229,229,1)));
@@ -27,15 +26,8 @@
 	background: -ms-linear-gradient(top,  rgba(234,234,234,0) 30%,rgba(234,234,234,0.14) 50%,rgba(229,229,229,0.5) 99%,rgba(229,229,229,1) 100%);
 	background: linear-gradient(top,  rgba(234,234,234,0) 30%,rgba(234,234,234,0.14) 50%,rgba(229,229,229,0.5) 99%,rgba(229,229,229,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eaeaea', endColorstr='#e5e5e5',GradientType=0 );
-
-/*make a proper mixin for this*/
-
 }
-
-/*AND this*/
-
 @mixin border-top {
-
 	border-width: 1px 0 0 0;
 	border-style: solid;
 	border-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(204,204,204,.9)), color-stop(60%,rgba(234,234,234,0)));
@@ -44,5 +36,4 @@
 	background: -ms-radial-gradient(center, ellipse cover,  rgba(204,204,204,.9) 0%,rgba(234,234,234,0) 60%);
 	background: radial-gradient(center, ellipse cover,  rgba(204,204,204,.9) 0%,rgba(234,234,234,0) 60%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#00eaeaea',GradientType=1 );
-
 }
