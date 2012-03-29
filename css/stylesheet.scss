@@ -77,14 +77,14 @@ img {
 				 1px -1px 0px $bidStroke,
 				-1px 1px 0px $bidStroke,
 				 1px 1px 0px $bidStroke,
-				 0px 2px 0px $bidStroke;
+				 0px 2px 0px ($bidStroke/1.1);
 	background: $btnBase;
 	border: 1px solid $bidStroke;
 	@include prefix(border-radius, 3px);
 	@include box-shadow((inset -.5px 1px 0px 0px rgba(255,255,255, .35),
 						 inset	0px 15px 10px -10px rgba(255,255,255, .1),
 						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
-								0px 1px 0px 0px ($bidStroke/3)));
+								0px 1px 0px 0px ($bidStroke/2.5)));
 	&:hover,
 	&:active {
 		border: 1px solid ($bidStroke/1.15);
@@ -98,7 +98,7 @@ img {
 						 inset	0px 15px 10px -10px rgba(255,255,255, .25),
 						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
 						 inset .5px -1px 0px 0px rgba(0,0,0, .18),
-								0px 1px 0px 0px ($bidStroke/3)));
+								0px 1px 0px 0px ($bidStroke/2.5)));
 	}
 	&:active {
 		text-shadow:-1px -1px 0px $bidStroke/1.05,
@@ -109,6 +109,6 @@ img {
 						 inset	0px -15px 10px -10px rgba(255,255,255, .1),
 						 inset	0px 12px 10px -8px rgba(0,0,0, .18),
 						 inset .5px -1px 0px 0px rgba(255,255,255, .05),
-								0px 1px 0px 0px ($bidStroke/3)));
+								0px 1px 0px 0px ($bidStroke/2.5)));
 	}
 }
