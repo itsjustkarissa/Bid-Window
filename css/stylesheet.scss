@@ -43,11 +43,12 @@ img,
 }
 .item-name {
 	font-weight: normal;
-	line-height: 1em;
+	line-height:  0.95em;
 	font-size: .9em;
-	margin: 9px 12px 0 12px;
+	margin: 9px auto 0 auto;
 	color: $medGrey;
-	/*border: red solid 1px;*/
+	height: 30px;
+/*	border: red solid 1px;*/
 }
 img {
 	padding: 2px 56px 0px 56px;
@@ -76,13 +77,13 @@ img {
 	font-size: $smallT;
 }
 .bid-button {
-	margin: 12px 60px;
+	margin: 12px auto;
 	top: -1px;
 	height: 30px;
 	width: 58px;
 	color: #fff;
-	font-size: $mediumT;
-	line-height: 1.5;
+	font-size: 1.1em;
+	line-height: 1.5em;
 	letter-spacing: .08em;
 	text-shadow:-1px -1px 0px $bidL,
 				 1px -1px 0px $bidL,
