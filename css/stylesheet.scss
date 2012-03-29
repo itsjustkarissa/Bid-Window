@@ -77,7 +77,7 @@ img {
 				 1px -1px 0px $bidStroke,
 				-1px 1px 0px $bidStroke,
 				 1px 1px 0px $bidStroke,
-				 0px 2px 0px ($bidStroke/1.1);
+				 0px 2px 0px $bidStroke;
 	background: $btnBase;
 	border: 1px solid $bidStroke;
 	@include prefix(border-radius, 3px);
