@@ -1,0 +1,99 @@
+/*@import "fontface.scss";*/
+@import "mixins.scss";
+
+$bodFont: Calibri;
+
+$medGrey: #444;
+$darkGrey: #333;
+$mutedGrey: #a3a3a3;
+
+$drkBlue: #385d66;
+$btnBase: #4b9aaa;
+$bidL: #3d7d89;
+$bidS: rgba(0,0,0, .18);
+
+$smallT: .75em;
+$mediumT: 1.3em;
+$largeT: 1.8em;
+
+
+
+body {
+	font-family: $bodFont;
+}
+.window {
+	position: absolute;
+	text-align: center;
+	top: 50px;
+	left: 40%;
+	height: 280px;
+	width: 180px;
+	color: $darkGrey;
+	border: 1px solid #d1d1d1;
+	@include box-shadow((inset 0px -2px 6px 0px rgba(0,0,0, .08)));
+}
+.item-name,
+img,
+.retail-p,
+.timer,
+.price,
+.username,
+.bid-button {
+	position: relative;
+}
+.item-name {
+	font-weight: normal;
+	line-height: 1em;
+	font-size: .9em;
+	margin: 9px 12px 0 12px;
+	color: $medGrey;
+	/*border: red solid 1px;*/
+}
+img {
+	padding: 2px 56px 0px 56px;
+}
+.retail-p {
+	font-size: $smallT;
+	color: $mutedGrey;
+	top: -3px;
+}
+.timer {
+	line-height: 1.4;
+	font-size: $mediumT;
+	height: 28px;
+	@include background1;
+	@include box-shadow((0px 1px 0px 0px rgba(0,0,0, .1)));
+	@include border-top;
+}
+.price {
+	top: 6px;
+	color: $darkGrey;
+	font-size: $largeT;
+	font-weight: bold;
+}
+.username {
+	color: $drkBlue;
+	font-size: $smallT;
+}
+.bid-button {
+	margin: 12px 60px;
+	top: -1px;
+	height: 30px;
+	width: 58px;
+	color: #fff;
+	font-size: $mediumT;
+	line-height: 1.5;
+	letter-spacing: .08em;
+	text-shadow:-1px -1px 0px $bidL,
+				 1px -1px 0px $bidL,
+				-1px 1px 0px $bidL,
+				 1px 1px 0px $bidL,
+				 0px 2px 0px $bidS;
+	background: $btnBase;
+	border: 1px solid #3d7d89;
+	@include prefix(border-radius, 3px);
+	@include box-shadow((inset -.5px 1px 0px 0px rgba(255,255,255, .35),
+						 inset	0px 15px 10px -10px rgba(255,255,255, .1),
+						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
+								0px 1px 0px 0px #1c4047));
+}
