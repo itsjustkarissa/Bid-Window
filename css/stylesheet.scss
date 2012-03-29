@@ -43,11 +43,12 @@ img,
 }
 .item-name {
 	font-weight: normal;
-	line-height: 1em;
+	line-height: 0.95em;
 	font-size: .9em;
 	margin: 9px 12px 0 12px;
 	color: $medGrey;
-	/*border: red solid 1px;*/
+	height: 30px;
+/*	border: red solid 1px;*/
 }
 img {
 	padding: 2px 56px 0px 56px;
