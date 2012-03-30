@@ -89,7 +89,8 @@ img {
 	&:active {
 		border: 1px solid ($bidStroke/1.15);
 	}
-	&:hover {
+	&:hover,
+	&:focus {
 		text-shadow:-1px -1px 0px $bidStroke*1.2,
 					 1px -1px 0px $bidStroke*1.2,
 					-1px 1px 0px $bidStroke/1.05,
