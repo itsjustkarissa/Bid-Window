@@ -64,7 +64,15 @@ img {
 	height: 28px;
 	@include background1;
 	@include box-shadow((0px 1px 0px 0px rgba(0,0,0, .1)));
-	@include border-top;
+
+	&:before {
+		content:"";
+		left: 0;
+		position: absolute;
+		height: 1px;
+		width: 180px;
+		@include background2;
+	}
 }
 .price {
 	top: 6px;
