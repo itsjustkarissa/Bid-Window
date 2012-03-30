@@ -5,20 +5,11 @@ $btnBase: #3e9fb2;
 $bidTXT: #fff;
 $bidStroke: #3d7d89;
 
-body {
-	font-family: Calibri, Helvetica, sans-serif;
-}
-.window {
-	position: absolute;
-	text-align: center;
-	top: 50px;
-	left: 40%;
-	height: 280px;
-	width: 180px;
-	color: #333;
-	border: 1px solid #d1d1d1;
-	@include box-shadow((inset 0px -2px 6px 0px rgba(0,0,0, .08)));
-}
+body,
+.window,
+.window2,
+.window3,
+.window4,
 .item-name,
 img,
 .retail-p,
@@ -27,6 +18,25 @@ img,
 .username,
 .bid-button {
 	position: relative;
+}
+body {
+	font-family: Calibri, Helvetica, sans-serif;
+}
+.window,
+.window2,
+.window3,
+.window4 {
+	display: inline-block;
+	text-align: center;
+	top: 50px;
+	left: 100px;
+	background: #fff;
+	margin: 8px;
+	height: 280px;
+	width: 180px;
+	color: #333;
+	border: 1px solid #d1d1d1;
+	@include box-shadow((inset 0px -2px 6px 0px rgba(0,0,0, .08)));
 }
 .retail-p,
 .username {
@@ -41,7 +51,8 @@ img,
 	font-size: .9em;
 }
 img {
-	padding: 2px 56px 0px 56px;
+	display: inline-block;
+	margin: 2px auto 0 auto;
 }
 .retail-p {
 	color: #a3a3a3;
@@ -86,7 +97,7 @@ img {
 						 inset	0px -12px 10px -8px rgba(0,0,0, .25),
 								0px 1px 0px 0px ($bidStroke/2.5)));
 	&:hover,
-	&:active {
+	&:focus {
 		border: 1px solid ($bidStroke/1.15);
 	}
 	&:hover {
@@ -101,8 +112,8 @@ img {
 								0px 1px 0px 0px ($bidStroke/2.5)));
 	}
 	&:active {
-		text-shadow:-1px -1px 0px $bidStroke/1.05,
-					 1px -1px 0px $bidStroke/1.05,
+		text-shadow:-1px -1px 0px $bidStroke*1.05,
+					 1px -1px 0px $bidStroke*1.05,
 					-1px 1px 0px $bidStroke*1.2,
 					 1px 1px 0px $bidStroke*1.2;
 		@include box-shadow((inset -.5px 1px 0px 0px rgba(255,255,255, .3),
@@ -111,4 +122,5 @@ img {
 						 inset .5px -1px 0px 0px rgba(255,255,255, .05),
 								0px 1px 0px 0px ($bidStroke/2.5)));
 	}
+	cursor: pointer;
 }
