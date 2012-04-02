@@ -37,10 +37,10 @@ body {
 	text-decoration: none;
 	font-size: .9em;
 	&:hover {
-	text-shadow: -.5px -.5px .5px rgba(0,0,0, .4),
-				.5px -.5px .5px rgba(0,0,0, .4),
-				-.5px .5px .5px rgba(0,0,0, .4),
-				.5px .5px .5px rgba(0,0,0, .4);
+	text-shadow: -.5px -.5px .5px rgba(0,0,0, .3),
+				.5px -.5px .5px rgba(0,0,0, .3),
+				-.5px .5px .5px rgba(0,0,0, .3),
+				.5px .5px .5px rgba(0,0,0, .3);
 	}
 }
 img {
