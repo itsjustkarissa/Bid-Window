@@ -28,7 +28,7 @@ body {
 	font-size: .75em;
 }
 .item_name {
-	color: #444;
+	color: #333;
 	display: block;
 	height: 30px;
 	margin: 9px auto 0 auto;
@@ -37,7 +37,6 @@ body {
 	text-decoration: none;
 	font-size: .9em;
 	&:hover {
-	color: #333;
 	text-shadow: -.5px -.5px .5px rgba(0,0,0, .4),
 				.5px -.5px .5px rgba(0,0,0, .4),
 				-.5px .5px .5px rgba(0,0,0, .4),
